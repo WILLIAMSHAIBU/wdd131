@@ -100,6 +100,18 @@ img {
     border-radius: 1rem;
 }
 
+hr {
+    border: none;
+    height: 2px;
+    background-color: rgb(115, 117, 121);
+    width: 50%;
+}
+
+.nav-menu a:hover {
+    color: #007acc;
+    text-decoration: underline;
+}
+
 footer {
     grid-area: footer;
     text-align: center;
