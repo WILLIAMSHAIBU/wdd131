@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Explore the beautiful country of Malawi, the Warm Heart of Africa."
+    />
+    <meta name="author" content="Your Name" />
+    <title>Explore Malawi</title>
+    <link rel="stylesheet" href="styles/place.css" />
+    <script src="scripts/place.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Malawi - The Warm Heart of Africa</h1>
+    </header>
+    
+
+    <main>
+        
+      <section class="hero">
+        <picture>
+          <source
+            srcset="images/Mulanje-Mountain.webp"
+            media="(max-width: 500px)"
+          />
+          <source
+            srcset="images/Mulanje-Mountain.webp"
+            media="(max-width: 1000px)"
+          />
+          <source
+            srcset="images/Mulanje-Mountain.webp"
+            media="(max-width: 1000px)"
+          />
+          
+        </picture>
+      </section>
+
+    <div class="weather-container">
+      <section class="weather1">
+          <h2>Data<h2>
+            <p>Population: <span >21,152,524</span></p>
+            <p>Languages: <span >Chichewa, Chitumbuka</span></p>
+            <p>Currency: <span >Malawi Kwacha</span></p>
+             <p>Time Zone: <span >UTC +2</span></p>
+             <p>Calling Zone: <span>+265</span></p>
+      </section>
+      <section class="weather">
+        <h2>Weather in Lilongwe</h2>
+        <img src="images/weather.svg" alt="weather" width="44" height="44">
+        <p>Temperature: <span id="temp">68</span>°F</p>
+        <p>Wind Speed: <span id="speed">7</span> mph</p>
+        <p>Wind Chill: <span id="chill"></span></p>
+        
+      </section>
+    </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="year"></span> Malawi | Last Modified:
+        <span id="lastModified"></span>
+      </p>
+    </footer>
+  </body>
+</html>
