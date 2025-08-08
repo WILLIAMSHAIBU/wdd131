@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A guide to using mobile money services in Malawi such as Airtel Money and TNM Mpamba.">
+  <meta name="author" content="William Shaibu">
+  <title>Product Review Form</title>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+  <title>Tutorials - Malawi Mobile Money Guide</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html"><img src="images/logo.png" alt="Site Logo" class="logo" /></a>
+      <h1>Malawi Mobile Money Guide</h1>
+      <!-- ADD id="hamburgerBtn" -->
+      <button class="hamburger" id="hamburgerBtn">☰</button>
+    </div>
+    <nav class="nav-container" id="navMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tutorials.html">Tutorials</a></li>
+        <li><a href="form.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section>
+      <h2>How to Send Money</h2>
+      <button onclick="toggleContent('send')">Show/Hide Instructions</button>
+      <p id="send" style="display:none;">
+        📞 1. Dial *211# (Airtel) or *444# (TNM)<br />
+        💸 2. Choose "Send Money"<br />
+        📱 3. Enter recipient's number<br />
+        💰 4. Enter amount<br />
+        🔐 5. Confirm with your PIN
+      </p>
+    </section>
+
+    <section>
+      <h2>How to Check Balance</h2>
+      <button onclick="toggleContent('balance')">Show/Hide Instructions</button>
+      <p id="balance" style="display:none;">
+        📞 Dial *211# or *444#<br />
+        📊 Choose "Balance Inquiry" to view your mobile wallet balance.
+      </p>
+    </section>
+
+    <section>
+      <h2>How to Buy Airtime</h2>
+      <button onclick="toggleContent('airtime')">Show/Hide Instructions</button>
+      <p id="airtime" style="display:none;">
+        📞 1. Dial *211# or *444#<br />
+        🛒 2. Choose "Buy Airtime"<br />
+        👤 3. Select "Self" or "Others"<br />
+        💰 4. Enter amount<br />
+        🔐 5. Enter your PIN to confirm
+      </p>
+    </section>
+
+    <section>
+      <h2>How to Pay a Bill</h2>
+      <button onclick="toggleContent('paybill')">Show/Hide Instructions</button>
+      <p id="paybill" style="display:none;">
+        📞 1. Dial *211# or *444#<br />
+        🧾 2. Choose "Pay Bills"<br />
+        🏛️ 3. Select the company (e.g., ESCOM, water board)<br />
+        🔢 4. Enter customer/account number<br />
+        💰 5. Enter amount<br />
+        🔐 6. Confirm with your PIN
+      </p>
+    </section>
+
+    <section>
+      <h2>How to Withdraw Cash</h2>
+      <button onclick="toggleContent('withdraw')">Show/Hide Instructions</button>
+      <p id="withdraw" style="display:none;">
+        📞 1. Dial *211# or *444#<br />
+        🏧 2. Choose "Withdraw Money"<br />
+        📍 3. Enter agent number<br />
+        💰 4. Enter amount<br />
+        🔐 5. Enter your PIN<br />
+        ✅ 6. Show confirmation code to agent
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Malawi Mobile Money Guide</p>
+    <p> 🌺 William Shaibu 🌺 Lilongwe, Malawi</p>
+  </footer>
+
+  <script>
+    // Fix hamburger menu toggle
+    document.getElementById("hamburgerBtn").addEventListener("click", function () {
+      document.getElementById("navMenu").classList.toggle("show");
+    });
+
+    // Expand/collapse sections
+    function toggleContent(id) {
+      const section = document.getElementById(id);
+      section.style.display = section.style.display === "none" ? "block" : "none";
+    }
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A guide to using mobile money services in Malawi such as Airtel Money and TNM Mpamba.">
+  <meta name="author" content="William Shaibu">
+  <title>Contact Us - Malawi Mobile Money Guide</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <a href="index.html">
+        <img src="images/logo.png" alt="Site Logo" class="logo" />
+      </a>
+      <h1>Malawi Mobile Money Guide</h1>
+      <button class="hamburger" id="hamburgerBtn">☰</button>
+    </div>
+    <nav class="nav-container" id="navMenu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tutorials.html">Tutorials</a></li>
+        <li><a href="form.html" class="active">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+            <h2>Contact Information</h2>
+            <p>If you have any questions or need help with mobile money services, feel free to reach out:</p>
+            <div class="contact-list">
+              <div class="contact-item">
+                📧 <span class="label">Email:</span> <a href="mailto:info@mobilemoneyguide.mw">info@mobilemoneyguide.mw</a>
+              </div>
+              <div class="contact-item">
+                📞 <span class="label">Phone:</span> <a href="tel:+265999123456">+265 999 123 456</a>
+              </div>
+              <div class="contact-item">
+                💬 <span class="label">WhatsApp:</span> <a href="https://wa.me/265888654321" target="_blank">+265 888 654 321</a>
+              </div>
+              <div class="contact-item">
+                📍 <span class="label">Location:</span> Blantyre, Malawi
+              </div>
+            </div>
+      </section>
+
+    <section>
+      <h2>Send Us Your Feedback</h2>
+      <form id="feedbackForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="provider">Mobile Provider:</label>
+        <select id="provider" name="provider">
+          <option value="airtel">Airtel Money</option>
+          <option value="mpamba">TNM Mpamba</option>
+        </select>
+
+        <label for="experience">Experience:</label>
+        <textarea id="experience" name="experience" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Malawi Mobile Money Guide</p>
+    <p> 🌺 William Shaibu 🌺 Lilongwe, Malawi</p>
+  </footer>
+
+  <script src="script/form.js"></script>
+  <script>
+    document.getElementById("hamburgerBtn").addEventListener("click", () => {
+      document.getElementById("navMenu").classList.toggle("show");
+    });
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
